@@ -4,25 +4,46 @@
 </head>
 
 <body>
-	<canvas id ="c" width= "200" height="200"></canvas>
+	<canvas id ="c" width= "500" height="500"></canvas>
 
 	<script> 
 		var c = document.querySelector("#c");
 		var ctx = c.getContext("2d");
 		
-		var image = new Image();
+		ctx.fillRect(100, 100, 100, 100);
+		ctx.strokeRect(50, 50, 50, 50);
 		
-		image.onload = function() {
-			console.log("Loaded image");
-			// The 0's are the initial coordinates. More info here: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
-			ctx.drawImage(image, 0, 0, c.width, c.height);
-			// Saving the created image
-			var savedImage = c.toDataURL();
-			window.open(savedImage);
+		// var c = document.querySelector("#c");
+		// var ctx = c.getContext("2d");
+		// ctx.fillStyle = "blue";
+		// // Start at (0,0) and draw a 50px x 50px blue rectangle.
+		// ctx.fillRect(0,0,50,50);
+		// // Start at (0,0) and clear a 25px x 25px rectangle.
+		// ctx.clearRect(0,0,25,25);
+		
+		//ctx.beginPath();
+		//moveTo does not actually draw, it just hovers to that position. More about drawing: http://www.w3.org/TR/2dcontext/#building-paths
+		//ctx.moveTo(10,10);
+		//ctx.lineTo(50,50);
+		//ctx.moveTo(50,10);
+		//ctx.lineTo(10,10);
+		//ctx.stroke();
+		
+		
+		// var image = new Image();
+		
+		// image.onload = function() {
+		// 	console.log("Loaded image");
+		// 	// The 0's are the initial coordinates. More info here: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
+		// 	ctx.drawImage(image, 0, 0, c.width, c.height);
+		// 	// Saving the created image. c is the canvas object created earlier.
+		// 	var savedImage = c.toDataURL();
+		// 	// Opens the saves image in a new window.
+		// 	window.open(savedImage);
 			
-		}
+	//}
 		
-		image.src = "https://scontent-ams3-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/12764320_10153841806855482_8319532423469054918_o.jpg";
+	//image.src = "https://scontent-ams3-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/12764320_10153841806855482_8319532423469054918_o.jpg";-->
 	</script>
 
 </body>
