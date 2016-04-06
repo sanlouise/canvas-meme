@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+
+</head>
+
+<body>
+	<canvas id ="c" width= "200" height="200"></canvas>
+
+	<script> 
+		var c = document.querySelector("#c");
+		var ctx = c.getContext("2d");
+		
+		var image = new Image();
+		
+		image.onload = function() {
+			console.log("Loaded image");
+			// The 0's are the initial coordinates. More info here: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
+			ctx.drawImage(image, 0, 0, c.width, c.height);
+			
+		}
+		
+		image.src - "https://scontent-ams3-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/12764320_10153841806855482_8319532423469054918_o.jpg";
+	</script>
+
+</body>
+</html>
