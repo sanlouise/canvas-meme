@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-
-<html lang="en-us">
+<!DOCTYPE HTML>
+<html>
 <head>
-
 </head>
 
 <body>
@@ -18,10 +16,13 @@
 			console.log("Loaded image");
 			// The 0's are the initial coordinates. More info here: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
 			ctx.drawImage(image, 0, 0, c.width, c.height);
+			// Saving the created image
+			var savedImage = c.toDataURL();
+			window.open(savedImage);
 			
 		}
 		
-		image.src - "https://scontent-ams3-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/12764320_10153841806855482_8319532423469054918_o.jpg";
+		image.src = "https://scontent-ams3-1.xx.fbcdn.net/hphotos-xla1/t31.0-8/12764320_10153841806855482_8319532423469054918_o.jpg";
 	</script>
 
 </body>
